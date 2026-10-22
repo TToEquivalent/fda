@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Ullrich Group at the University of Georgia investigates ultrafast molecular dynamics, biophotonic molecules, and advanced materials using time-resolved spectroscopy.">
+  <meta name="theme-color" content="#101c36">
+  <title>Ullrich Group | University of Georgia</title>
+  <style>
+    :root {
+      --navy: #101c36;
+      --navy-2: #172747;
+      --red: #ba0c2f;
+      --gold: #e8b04a;
+      --ink: #1d2738;
+      --muted: #667085;
+      --paper: #f6f8fb;
+      --white: #fff;
+      --line: #e3e8f0;
+      --shadow: 0 18px 50px rgba(16, 28, 54, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); line-height: 1.65; background: var(--white); }
+    a { color: inherit; }
+    .topline { height: 5px; background: linear-gradient(90deg, var(--red) 0 36%, var(--gold) 36% 41%, var(--navy) 41%); }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(227,232,240,.9); }
+    .nav-wrap { max-width: 1180px; margin: auto; padding: 0 24px; min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 220px; }
+    .brand-mark { width: 43px; height: 43px; border-radius: 12px; display: grid; place-items: center; background: var(--navy); color: white; font-weight: 850; font-size: 17px; letter-spacing: -1px; box-shadow: 0 5px 12px rgba(16,28,54,.18); }
+    .brand-name { display: block; font-size: 15px; font-weight: 800; line-height: 1.2; color: var(--navy); letter-spacing: -.2px; }
+    .brand-sub { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    nav { display: flex; align-items: center; gap: 25px; }
+    nav a { text-decoration: none; font-size: 13px; font-weight: 650; color: #475467; transition: color .2s; }
+    nav a:hover { color: var(--red); }
+    .nav-cta { background: var(--red); color: white !important; padding: 11px 16px; border-radius: 7px; }
+    .menu-btn { display: none; border: 1px solid var(--line); background: white; border-radius: 8px; padding: 9px 12px; font-size: 19px; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; color: white; background: radial-gradient(ellipse at 80% 20%, rgba(64,102,166,.42), transparent 34%), radial-gradient(ellipse at 12% 100%, rgba(186,12,47,.2), transparent 30%), linear-gradient(125deg, #0b1428, #172a4c 65%, #20375b); }
+    .hero:before { content: ""; position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to right, transparent, black); }
+    .hero-inner { position: relative; max-width: 1180px; margin: auto; padding: 96px 24px 92px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 54px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #f2c96d; text-transform: uppercase; letter-spacing: 1.7px; font-size: 11px; font-weight: 800; }
+    .eyebrow:before { content: ""; height: 2px; width: 28px; background: var(--gold); }
+    h1 { margin: 19px 0 20px; max-width: 700px; font-size: clamp(42px, 5vw, 66px); line-height: 1.05; letter-spacing: -2.6px; font-weight: 820; }
+    h1 em { font-style: normal; color: #f2c96d; }
+    .hero p { color: #d4dced; max-width: 610px; font-size: 17px; line-height: 1.8; margin: 0 0 30px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 19px; border-radius: 7px; text-decoration: none; font-size: 13px; font-weight: 750; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--red); color: white; box-shadow: 0 9px 20px rgba(186,12,47,.25); }
+    .btn-secondary { border: 1px solid rgba(255,255,255,.35); color: white; background: rgba(255,255,255,.04); }
+    .hero-art { min-height: 330px; position: relative; display: grid; place-items: center; }
+    .orbit { width: min(100%, 390px); aspect-ratio: 1; position: relative; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; display: grid; place-items: center; }
+    .orbit:before, .orbit:after { content: ""; position: absolute; width: 75%; height: 75%; border: 1px solid rgba(242,201,109,.35); border-radius: 50%; transform: rotate(55deg) scaleX(.58); }
+    .orbit:after { transform: rotate(-55deg) scaleX(.58); border-color: rgba(255,255,255,.25); }
+    .core { width: 145px; height: 145px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #f6d88b, #c7833b 58%, #8b3b3f); box-shadow: 0 0 60px rgba(232,176,74,.3), inset -12px -12px 25px rgba(16,28,54,.3); color: #fff; font-size: 43px; font-weight: 800; }
+    .orbit-dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #f2c96d; box-shadow: 0 0 22px rgba(242,201,109,.8); }
+    .dot-one { top: 16%; left: 27%; }.dot-two { right: 11%; top: 48%; background: #f8faff; }.dot-three { bottom: 13%; left: 33%; width: 9px; height: 9px; }
+    .art-label { position: absolute; bottom: 1%; right: 0; padding: 12px 15px; border: 1px solid rgba(255,255,255,.18); border-radius: 8px; background: rgba(10,20,40,.65); color: #e7edf8; font-size: 11px; letter-spacing: .5px; }
+    .stats { background: white; border-bottom: 1px solid var(--line); }
+    .stats-inner { max-width: 1180px; margin: auto; padding: 25px 24px; display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .stat { display: flex; align-items: center; gap: 13px; padding: 5px 22px; border-right: 1px solid var(--line); }
+    .stat:first-child { padding-left: 0; }.stat:last-child { border: 0; }
+    .stat-icon { width: 42px; height: 42px; flex: 0 0 42px; border-radius: 10px; display: grid; place-items: center; background: #fceef1; color: var(--red); font-size: 20px; }
+    .stat strong { display: block; font-size: 13px; color: var(--navy); }.stat span { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+    section { padding: 86px 24px; }
+    .container { max-width: 1180px; margin: auto; }
+    .section-head { max-width: 700px; margin-bottom: 38px; }
+    .kicker { color: var(--red); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: 1.8px; }
+    h2 { color: var(--navy); font-size: clamp(30px, 3.5vw, 43px); line-height: 1.15; letter-spacing: -1.2px; margin: 11px 0 15px; }
+    .section-head p, .about-copy p { color: var(--muted); margin: 0; font-size: 15px; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: center; }
+    .about-visual { min-height: 340px; border-radius: 16px; overflow: hidden; position: relative; background: linear-gradient(145deg, #e9eef7, #cfd9e9); display: grid; place-items: center; }
+    .about-visual:before { content: ""; position: absolute; width: 270px; height: 270px; border-radius: 50%; border: 1px solid rgba(23,39,71,.22); box-shadow: 0 0 0 35px rgba(255,255,255,.22), 0 0 0 70px rgba(255,255,255,.18); }
+    .spectra { position: relative; display: flex; align-items: end; gap: 7px; height: 170px; transform: skewY(-9deg); }
+    .spectra span { width: 12px; border-radius: 8px 8px 0 0; background: linear-gradient(to top, var(--red), #f2c96d); opacity: .9; }
+    .spectra span:nth-child(1){height:35%}.spectra span:nth-child(2){height:50%}.spectra span:nth-child(3){height:27%}.spectra span:nth-child(4){height:78%}.spectra span:nth-child(5){height:62%}.spectra span:nth-child(6){height:100%}.spectra span:nth-child(7){height:70%}.spectra span:nth-child(8){height:42%}.spectra span:nth-child(9){height:84%}.spectra span:nth-child(10){height:56%}.spectra span:nth-child(11){height:32%}.spectra span:nth-child(12){height:65%}.spectra span:nth-child(13){height:46%}
+    .visual-caption { position: absolute; bottom: 18px; left: 20px; right: 20px; padding: 12px 15px; background: rgba(255,255,255,.84); backdrop-filter: blur(8px); border-radius: 9px; color: var(--navy); font-size: 12px; font-weight: 750; }
+    .about-copy p + p { margin-top: 15px; }
+    .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
+    .point { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 700; color: var(--navy); }
+    .check { color: var(--red); font-size: 17px; font-weight: 900; }
+    .research { background: var(--paper); }
+    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .research-card { background: white; padding: 28px 25px; border: 1px solid #e8edf4; border-radius: 12px; transition: transform .2s, box-shadow .2s; }
+    .research-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .card-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; color: var(--red); background: #fceef1; font-size: 23px; margin-bottom: 20px; }
+    .research-card h3 { margin: 0 0 10px; color: var(--navy); font-size: 17px; line-height: 1.35; }
+    .research-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .tag { display: inline-block; margin-top: 18px; color: #8b1830; background: #fff1f3; border-radius: 5px; padding: 5px 8px; font-size: 10px; font-weight: 800; letter-spacing: .4px; }
+    .methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+    .method-list { display: grid; gap: 17px; margin-top: 25px; }
+    .method { display: flex; gap: 15px; align-items: flex-start; }
+    .method-num { flex: 0 0 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: white; font-size: 12px; font-weight: 800; }
+    .method h3 { margin: 0 0 4px; color: var(--navy); font-size: 14px; }
+    .method p { margin: 0; font-size: 12px; color: var(--muted); }
+    .quote-panel { background: var(--navy); color: white; border-radius: 16px; padding: 36px; position: relative; overflow: hidden; }
+    .quote-panel:after { content: "λ"; position: absolute; right: 8px; bottom: -65px; font-size: 230px; line-height: 1; color: rgba(255,255,255,.05); font-weight: 800; }
+    .quote-mark { color: var(--gold); font-size: 42px; line-height: 1; }
+    .quote-panel h3 { font-size: 25px; line-height: 1.25; margin: 12px 0; letter-spacing: -.6px; position: relative; z-index: 1; }
+    .quote-panel p { color: #cbd5e6; font-size: 13px; position: relative; z-index: 1; }
+    .quote-panel a { display: inline-block; color: #f2c96d; font-size: 12px; font-weight: 800; text-decoration: none; margin-top: 12px; position: relative; z-index: 1; }
+    .contact { background: #f7f8fb; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+    .contact-card { padding: 30px; border-radius: 13px; background: white; border: 1px solid var(--line); }
+    .contact-row { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .contact-row:last-child { border: 0; }
+    .contact-row .card-icon { width: 39px; height: 39px; flex: 0 0 39px; margin: 0; font-size: 17px; }
+    .contact-row strong { display: block; font-size: 12px; color: var(--navy); }
+    .contact-row span, .contact-row a { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .contact-row a:hover { color: var(--red); }
+    .contact-note { background: linear-gradient(135deg, var(--navy), #243b62); color: white; border-radius: 13px; padding: 30px; }
+    .contact-note h3 { font-size: 23px; line-height: 1.25; margin: 0 0 12px; }
+    .contact-note p { color: #d1d9e8; font-size: 13px; margin: 0 0 20px; }
+    footer { background: #0a1325; color: #b6c0d1; padding: 26px 24px; }
+    .footer-inner { max-width: 1180px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 11px; }
+    .footer-inner a { color: #e7edf8; text-decoration: none; }
+    .footer-links { display: flex; gap: 18px; }
+    @media (max-width: 900px) {
+      nav { gap: 14px; } nav a { font-size: 12px; }
+      .hero-inner { gap: 20px; padding-top: 75px; padding-bottom: 75px; }
+      .about-grid, .methods-grid { gap: 35px; }
+      .research-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .nav-wrap { min-height: 70px; padding: 0 18px; }.menu-btn { display: block; }
+      nav { display: none; position: absolute; top: 70px; left: 0; right: 0; padding: 18px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; box-shadow: 0 12px 20px rgba(16,28,54,.08); }
+      nav.open { display: flex; } nav a { padding: 12px 8px; font-size: 14px; } .nav-cta { text-align: center; margin-top: 7px; }
+      .hero-inner { grid-template-columns: 1fr; padding: 65px 22px 55px; }
+      h1 { letter-spacing: -1.6px; }.hero p { font-size: 15px; }.hero-art { min-height: 270px; }.orbit { width: 270px; }.core { width: 105px; height: 105px; font-size: 32px; }
+      .stats-inner { grid-template-columns: 1fr; gap: 8px; padding: 18px 22px; }.stat { padding: 10px 0; border-right: 0; border-bottom: 1px solid var(--line); }.stat:last-child { border-bottom: 0; }
+      section { padding: 62px 22px; }.about-grid, .methods-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }.about-visual { min-height: 280px; }
+      .research-grid { grid-template-columns: 1fr; }.about-points { grid-template-columns: 1fr; }.quote-panel { padding: 27px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }.footer-links { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Ullrich Group home">
+        <span class="brand-mark">UG</span>
+        <span><span class="brand-name">ULLRICH GROUP</span><span class="brand-sub">University of Georgia · Physics & Astronomy</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#methods">Methods</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="https://www.physast.uga.edu/research/ullrich-group/" target="_blank" rel="noopener">Official Lab Page ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="padding:0">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Molecular Science · Ultrafast Dynamics</span>
+          <h1>Exploring matter at the <em>speed of light.</em></h1>
+          <p>The Ullrich Group studies how light transforms molecules and advanced materials. By observing ultrafast processes as they unfold, we work toward a deeper understanding of molecular function, photochemistry, and energy-related materials.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#research">Explore Our Research <span>→</span></a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Abstract scientific illustration of light and molecular dynamics">
+          <div class="orbit">
+            <div class="core">hν</div>
+            <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
+          </div>
+          <div class="art-label">TIME-RESOLVED SPECTROSCOPY · FEMTOSECONDS</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stats-inner">
+        <div class="stat"><div class="stat-icon">⌁</div><div><strong>Ultrafast Spectroscopy</strong><span>Tracking light-driven processes</span></div></div>
+        <div class="stat"><div class="stat-icon">◉</div><div><strong>Molecular Photodynamics</strong><span>Understanding excited-state behavior</span></div></div>
+        <div class="stat"><div class="stat-icon">✧</div><div><strong>Advanced Materials</strong><span>Exploring optoelectronic applications</span></div></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-visual" aria-label="Abstract spectroscopy signal illustration">
+          <div class="spectra"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="visual-caption">Turning ultrafast signals into molecular insight</div>
+        </div>
+        <div class="about-copy">
+          <span class="kicker">About the group</span>
+          <h2>Seeing the hidden dynamics of molecules.</h2>
+          <p>The Ullrich Group is part of the Department of Physics and Astronomy at the University of Georgia. Our research uses time-resolved spectroscopic experiments to distinguish the intrinsic properties of molecules from the effects of their surroundings.</p>
+          <p>By combining carefully controlled experiments with theoretical calculations, we investigate how molecular systems respond to light and how their structure and environment influence the pathways that follow.</p>
+          <div class="about-points">
+            <div class="point"><span class="check">✓</span> Fundamental molecular science</div>
+            <div class="point"><span class="check">✓</span> Light-driven dynamics</div>
+            <div class="point"><span class="check">✓</span> Experimental spectroscopy</div>
+            <div class="point"><span class="check">✓</span> Theory-informed discovery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research" id="research">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Research directions</span>
+          <h2>Questions at the intersection of light, molecules, and materials.</h2>
+          <p>Our work spans biological photochemistry and functional materials, with a focus on understanding the ultrafast events that determine what happens next.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <div class="card-icon">✺</div>
+            <h3>Biophotonic Molecules</h3>
+            <p>Investigating light-activated biomolecules and the excited-state pathways that shape their function, efficiency, and stability.</p>
+            <span class="tag">MOLECULAR PHOTODYNAMICS</span>
+          </article>
+          <article class="research-card">
+            <div class="card-icon">⌁</div>
+            <h3>Ultrafast Spectroscopy</h3>
+            <p>Using femtosecond and picosecond pump–probe methods to follow rapid molecular changes after photoexcitation.</p>
+            <span class="tag">TIME-RESOLVED METHODS</span>
+          </article>
+          <article class="research-card">
+            <div class="card-icon">▦</div>
+            <h3>Thin Films & Nanomaterials</h3>
+            <p>Studying ultrafast processes and charge-separation dynamics in materials relevant to photocatalysis and solar-energy conversion.</p>
+            <span class="tag">FUNCTIONAL MATERIALS</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methods">
+      <div class="container methods-grid">
+        <div>
+          <span class="kicker">How we investigate</span>
+          <h2>Capture the moment. Understand the mechanism.</h2>
+          <p style="color:var(--muted);font-size:14px;margin:0">Our experimental approach combines time resolution, controlled sample environments, and complementary analytical techniques to build a clearer picture of molecular behavior.</p>
+          <div class="method-list">
+            <div class="method"><span class="method-num">01</span><div><h3>Pump–probe spectroscopy</h3><p>Initiate a process with a short light pulse and monitor how the sample changes over time.</p></div></div>
+            <div class="method"><span class="method-num">02</span><div><h3>Photoelectron and ion detection</h3><p>Use complementary signals to investigate excited states and competing molecular pathways.</p></div></div>
+            <div class="method"><span class="method-num">03</span><div><h3>Computational interpretation</h3><p>Combine experimental observations with theoretical calculations to interpret the underlying dynamics.</p></div></div>
+          </div>
+        </div>
+        <aside class="quote-panel">
+          <div class="quote-mark">“</div>
+          <h3>From ultrafast events to functional understanding.</h3>
+          <p>Time-resolved experiments help reveal processes that are too fast to observe with conventional measurements.</p>
+          <a href="https://sites.physast.uga.edu/people/susanne_ullrich" target="_blank" rel="noopener">Meet Professor Susanne Ullrich ↗</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Contact</span>
+          <h2>Connect with the Ullrich Group.</h2>
+          <p>For research questions and further information, contact Professor Susanne Ullrich or visit the official University of Georgia lab page.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-row"><div class="card-icon">✉</div><div><strong>Email</strong><a href="mailto:ullrich@uga.edu">ullrich@uga.edu</a></div></div>
+            <div class="contact-row"><div class="card-icon">⌖</div><div><strong>Office</strong><span>Room 243, Physics Building<br>University of Georgia, Athens, GA</span></div></div>
+            <div class="contact-row"><div class="card-icon">☎</div><div><strong>Telephone</strong><a href="tel:+17065420344">706-542-0344</a></div></div>
+          </div>
+          <div class="contact-note">
+            <h3>Learn more about our work</h3>
+            <p>Explore the university’s official group page for additional research information, lab resources, and updates.</p>
+            <a class="btn btn-primary" href="https://www.physast.uga.edu/research/ullrich-group/" target="_blank" rel="noopener">Visit Official Lab Page ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Ullrich Group · University of Georgia</div>
+      <div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://www.physast.uga.edu/" target="_blank" rel="noopener">UGA Physics & Astronomy</a></div>
+    </div>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
