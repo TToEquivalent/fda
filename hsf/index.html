@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <title></title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark top_menu">
+        <div class="container mobile_header">
+            <a class="affiliate logo navbar-brand" href="register.html" style="text-transform: uppercase;font-weight: bold;">Access LIVE!</a>
+            <ul class="nav justify-content-end">
+                <li class="dropdown">
+                    <a href="#" class="signin_btn" role="button" aria-expanded="true">
+                        <i class="fa fa-user"></i> Login |
+                    </a>
+                    <a class="affiliate" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+			  <br>
+   
+  <br>
+    <div class="container">
+        <div class="header" style="padding-bottom:0;"><br>
+            <h2 class="text-center"><b style="color: White;"></b></h2><br>            
+        </div>
+        <div class="video_section" id="video">
+            <center><img id="randomImage" class="img img-fluid" src="" alt="High School Football 2026"></center>
+			
+  
+            <div class="video_player videoPlayerBtn">
+                <span id="play" class="play-btn-border ease">
+                    <i class="fa fa-play-circle headline-round ease blink" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="text-center videoLoading" style="display:none">
+                <span class="spinner loading"></span>
+            </div>
+            <div class="controls">
+                <div class="controlContent">
+                    <div id="leftControls">
+                        <i class="fa fa-play controlBtn videoPlayerBtn" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <i class="fa fa-volume-up controlBtn"aria-hidden="true"></i>
+                    </div>
+                    <div id="rightControls">
+                        <span class="live-badge__icon"></span>LIVE &nbsp;&nbsp;
+                        <i class="fa fa-cog"></i>&nbsp;&nbsp;
+                        <i class="fa fa-arrows icon-size-fullscreen"></i>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="text-center">
+            <a class="btn btn-outline affiliate" href="register.html">Watch Live Now</a>
+        </div>
+        <br>
+		
+  <br>
+  
+     <br>
+	 
+        <center>
+            <div class="col-md-7">
+                <div class="device-features__content text-left">
+                    <p class="sub_headline" style="text-align:center;">
+                        Watch High School Football 2026 Live Stream Online for FREE, TV Coverage, Replays, Highlights from Anywhere at Anytime. Optimized for PC, Mac, iPad, iPhone, Android, PS4, Xbox One, and Smart TVs.
+                    </p>
+                    <center>
+                        <div class="device-features__brands">
+                            <img class="img-fluid" width="30" src="assets/img/channels/devices_pc.png" alt="All Devices">
+                            <img class="img-fluid" width="30" src="assets/img/channels/apple_pc.png" alt="iOS">
+                            <img class="img-fluid" width="30" src="assets/img/channels/android_pc.png" alt="Android">
+                            <img class="img-fluid" width="30" src="assets/img/channels/chromecast_pc.png" alt="Chromecast">
+                        </div>
+                    </center>
+                    <center>
+                        <a href="register.html" class="btn btn-md btn-outline affiliate"> Create A Free Account</a>
+                    </center>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="copyright">Copyright @ nhsfr.com | All rights reserved</div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="footer__links d-flex justify-content-end">
+                        <a href="https://nhsfr.com/dmca/" data-page="dmca" data-title="DMCA" class="info"> DMCA</a>
+                        <a href="https://nhsfr.com/privacy-policy/" data-page="privacy" data-title="Privacy Policy" class="info">Privacy Policy</a>
+                        <a href="https://nhsfr.com/contact-us/" data-page="terms" data-title="Terms and Condition" class="info">Contact US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="singin_panel">
+        <div class="signin__close"><i class="fa fa-close fa-lg" aria-hidden="true"></i></div>
+        <div class="signin__holder">
+            <form id="signinform">
+                <div class="signin__default">
+                    <h1>Sign In</h1>
+                    <div class="signin__group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="signin__group">
+                        <label for="password">Password</label>
+                        <span class="label-note" id="forgotpass">Forgot Password?</span>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-alert" style="display:none;">Oops! Your Password or email address Doesn't Match!</div>
+                    <button class="btn btn-outline btn-md mt-3 singin_btn" type="submit">Sign In</button>
+                    <div class="signin__footer">
+                        <a href="register.html" class="affiliate">Don't have an account?<span>Sign Up</span></a>
+                    </div>
+                </div>
+            </form>
+
+            <form id="resetpassform">
+                <div class="signin__resetpassword" style="display:none;">
+                    <h1>Reset Password</h1>
+                    <p class="text-muted">Enter your email address and we'll send you a linkto reset your password.</p>
+                    <div class="signin__group">
+                        <label for="emailreset">Email</label>
+                        <input type="text" id="emailreset" placeholder="Enter your email">
+                    </div>
+                    <div class="form-alert" style="display:none;"></div>
+                    <button class="btn btn-outline btn-md mt-3" type="submit">Submit</button>
+                    <div class="signin__footer"><a id="signindefault">Back to Sign In</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="video_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal_header_info">
+                    <h6 class="modal-title text-center" id="exampleModalLabel"> Please Sign Up to Watch High School Football 2026 Live for Free</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+							    <img id="randomImage" class="img-fluid" src="" alt="High School Football 2026">
+                            </div>
+                            <h5>Member Login</h5>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-sm" id="userid" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control input-sm" id="password" placeholder="password">
+                            </div>
+                            <p class="msg"></p>
+                            <input type="button" id="modal_login_btn" class="btn btn-primary" value="Log in">
+                            <a class="affiliate btn btn-block btn-success" href="register.html">Sign Up For Free!</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="list-group">
+                                <div class="list-group-item modal-list">
+                                    <h6 class="list-group-item-heading"><i class="fa fa-film biru fa-fw"></i>High Quality Streaming</h6>
+                                    <p class="list-group-item-text">High School Football 2026 are availablein the HD Quality or even higher!</p>
+                                </div>
+                                <div class="list-group-item modal-list">
+                                    <h6 class="list-group-item-heading"><i class="fa fa-youtube-play pink fa-fw"></i>Watch Without Limits</h6>
+                                    <p class="list-group-item-text">You will get access to all events without any limits.</p>
+                                </div>
+                                <div class="list-group-item modal-list">
+                                    <h6 class="list-group-item-heading"><i class="fa fa-ban coklat fa-fw"></i>No Ads, 100% Free Advertising</h6>
+                                    <p class="list-group-item-text">Your account will always be free from all kinds of advertising.</p>
+                                </div>
+                                <div class="list-group-item modal-list">
+                                    <h6 class="list-group-item-heading"><i class="fa fa-tablet ijo fa-fw"></i>Watch anytime, anywhere</h6>
+                                    <p class="list-group-item-text">It works on your Mobile, TV, PC or MAC!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="page_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="info_page_title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write(
+            '<script src="assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        /*
+         * ============================================================
+         * GET URL PARAMETER (Robust Custom Parser handling raw '&' in query)
+         * ============================================================
+         */
+
+        function getParameterByName(name) {
+            const search = window.location.search;
+            const match = search.match(new RegExp('[?&]' + name + '=([^#]*)'));
+            return match ? decodeURIComponent(match[1].replace(/\+/g, " ")) : null;
+        }
+
+        const key =
+            getParameterByName('m') || "High School Football 2026";
+        document.title = key + " Live Streaming";
+
+        const header =
+            document.querySelector('h2.text-center b');
+        if (header) {
+            header.textContent = key;
+        }
+
+
+        /*
+         * ============================================================
+         * UPDATE ALL REGISTER.HTML LINKS
+         * ============================================================
+         */
+        document
+            .querySelectorAll('a[href="register.html"]')
+            .forEach(function(link) {
+
+                const registerURL =
+                    new URL('register.html', window.location.href);
+
+                registerURL.searchParams.set('m', key);
+
+                link.href = registerURL.href;
+
+            });
+
+
+        /*
+         * ============================================================
+         * REPLACE EVENT TEXT
+         * ============================================================
+         */
+
+        function replaceText(node, search, replace) {
+            node.childNodes.forEach(function(n) {
+                if (n.nodeType === Node.TEXT_NODE) {
+                    n.textContent =
+                        n.textContent.replace(
+                            new RegExp(
+                                search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+                                'g'
+                            ),
+                            replace
+                        );
+                } else {
+                    replaceText(n, search, replace);
+                }
+            });
+        }
+
+        replaceText(
+            document.body,
+            "High School Football 2026",
+            key + " High School Football"
+        );
+
+        /*
+         * ============================================================
+         * UPDATE MODAL TITLE
+         * ============================================================
+         */
+
+        const modalTitle =
+            document.getElementById('exampleModalLabel');
+        if (modalTitle) {
+            modalTitle.textContent =
+                "Please Sign Up to Watch " +
+                key +
+                " Live for Free";
+        }
+
+        /*
+         * ============================================================
+         * JQUERY
+         * ============================================================
+         */
+
+        $(function() {
+            $('.signin_btn').on('click', function(e) {
+                e.preventDefault();
+                $('#singin_panel').addClass('open');
+            });
+            $('.signin__close').on('click', function(e) {
+                e.preventDefault();
+                $('#singin_panel').removeClass('open');
+            });
+            $('#forgotpass').on('click', function(e) {
+                e.preventDefault();
+                $('.signin__default').hide();
+                $('.signin__resetpassword').show();
+            });
+            $('#signindefault').on('click', function(e) {
+                e.preventDefault();
+                $('.signin__default').show();
+                $('.signin__resetpassword').hide();
+            });
+            $('.singin_btn').on('click', function(e) {
+                e.preventDefault();
+                $('.form-alert').show();
+                $('#email').addClass('invalid');
+            });
+            $('.login_btn').on('click', function(e) {
+                e.preventDefault();
+                $('.login_refresh').show();
+                $('.login_btn').hide();
+                $('.loginError').hide();
+                setTimeout(function() {
+                    $('.memberLogin').hide();
+                    $('.login_refresh').hide();
+                    $('.loginError').show();
+                    $('.login_btn').show();
+                }, 2000);
+            });
+
+            /*
+             * MODAL LOGIN
+             */
+
+            $('#modal_login_btn').on('click', function(e) {
+                e.preventDefault();
+                let str =
+                    "<span class='badge badge-info'>Please wait...</span>";
+                $('.msg').html(str);
+                setTimeout(function() {
+                    str =
+                        "<span class='badge badge-warning'>" +
+                        "Wrong Username or Password" +
+                        "</span>";
+                    $('.msg').html(str);
+                }, 2000);
+            });
+
+            /*
+             * VIDEO PLAYER
+             */
+
+            $('.videoPlayerBtn').on('click', function(e) {
+                e.preventDefault();
+                let url = $(this).attr('data-url');
+                $('.video_player').hide();
+                $('.videoLoading').show();
+
+                setTimeout(function() {
+                    $('#video_modal').modal('show');
+                }, 2000);
+            });
+
+            /*
+             * VIDEO MODAL CLOSED
+             */
+
+            $('#video_modal').on(
+                'hidden.bs.modal',
+                function(e) {
+                    e.preventDefault();
+                    $('.videoLoading').hide();
+                    $('.video_player').show();
+                }
+            );
+
+            /*
+             * INFORMATION PAGES
+             */
+
+            $('.info').on('click', function(e) {
+                e.preventDefault();
+                let page =
+                    $(this).attr('data-page');
+                page = page + '.php';
+                let page_title =
+                    $(this).attr('data-title');
+
+                $('#page_modal')
+                    .find('.modal-body')
+                    .load(page, function() {
+                        $('#info_page_title')
+                            .text(page_title);
+                        $('#page_modal')
+                            .modal('show');
+                    });
+            });
+
+            /*
+             * AFFILIATE LINKS
+             */
+
+            $('.affiliate').on('click', function(e) {
+            });
+
+            /*
+             * FULLSCREEN
+             */
+
+            $(document).on(
+                'click',
+                '.icon-size-fullscreen',
+                function(e) {
+                    e.preventDefault();
+                    launchIntoFullscreen(
+                        document.getElementById("video")
+                    );
+                }
+            );
+
+            $(document).on(
+                'click',
+                '.icon-size-actual',
+                function(e) {
+                    e.preventDefault();
+                    exitFullscreen();
+                }
+            );
+        });
+
+
+        /*
+         * ============================================================
+         * FULLSCREEN FUNCTIONS
+         * ============================================================
+         */
+        function launchIntoFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+            $(".icon-size-fullscreen")
+                .removeClass("icon-size-fullscreen")
+                .addClass("icon-size-actual");
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+
+            $(".icon-size-actual")
+                .removeClass("icon-size-actual")
+                .addClass("icon-size-fullscreen");
+        }
+
+        $(document).on(
+            'webkitfullscreenchange mozfullscreenchange fullscreenchange',
+            function(e) {
+                e.preventDefault();
+                const fullScreen =
+                    document.fullscreenElement ||
+                    document.mozFullScreenElement ||
+                    document.webkitFullscreenElement ||
+                    document.msFullscreenElement
+                        ? true
+                        : false;
+                if (fullScreen) {
+                    $(".icon-size-fullscreen")
+                        .removeClass("icon-size-fullscreen")
+                        .addClass("icon-size-actual");
+                } else {
+                    $(".icon-size-actual")
+                        .removeClass("icon-size-actual")
+                        .addClass("icon-size-fullscreen");
+                }
+            }
+        );
+
+        /*
+         * ============================================================
+         * RANDOM PLAY IMAGE
+         * ============================================================
+         */
+        const images = [
+            "https://cloudfront-us-east-1.images.arcpublishing.com/gray/IO3H5242F5AGLNTYPVRDY5SJOA.png",
+            "https://s.hdnux.com/photos/01/34/05/57/24140799/3/1920x0.jpg",
+            "https://www.yurview.com/wp-content/uploads/2024/06/Screenshot-2024-06-21-084331.jpg"
+        ];
+
+        const randomIndex =
+            Math.floor(Math.random() * images.length);
+        const randomImage =
+            document.getElementById("randomImage");
+        if (randomImage) {
+            randomImage.src =
+                images[randomIndex];
+        }
+    </script>
+
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4691864,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+
+</body>
+
+</html>
